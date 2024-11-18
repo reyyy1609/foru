@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DARI AKU</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #message {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="message">Memuat pesan...</div>
+
+    <script>
+        // Array pesan yang akan ditampilkan
+        const messages = [
+            "HALOWWWWWW!",
+            "HARUSNYA KAMU TAU AKU SIAPA",
+            "LAKI LAKI YANG NGIRIM PESAN MELALUI WEBSITE",
+            "IYA ITU AKUUUUU",
+            "DISINI AKU HUBUNGI KAMU DENGAN NIAT BAIK",
+            "AKU GAADA MAKSUD APAPUN",
+            "LUPAKAN YANG DULU",
+            "IYA SURAM TAPI ITU ADA MASANYA DAN UDAH BERLALU",
+            "AKU PENGEN KITA TEMENAN LAGIIII",
+            "BUANG BUANG MOMENT GA SIH KALAU KITA ASING BEGITU AJA",
+            "UDA KENAL DARI LAMA BANGET DAN BANYAK HAL YANG KITA LALUI MESKI HANYA ONLINE",
+            "PENGENNYA SEKARANG TEMENAN AJA ITS OK",
+            "TAPI SEBELUMNYA MAU TANYAAAA",
+            "IF URE ALREADY HAD A BF",
+            "JUST TELL ME KARNA GAENAK AJA UDA ADA COWO TAPI MASI AKU GANDOLIN",
+            "OPEN SEMUA BLOKIRAN SOSMED KU LALU KITA TEMENAN LAGI YAAAA",
+            "AKU MINTA MAAF ATAS SEMUA KEBURUKAN KU",
+            "MINTA MAAF SE DALAM DALAMNYA",
+            "CHAT AKU AJA GAUSA SUNNGKAN."
+        ];
+
+        let currentIndex = 0; // Indeks pesan saat ini
+        const messageElement = document.getElementById("message");
+
+        function changeMessage() {
+            // Menampilkan pesan saat ini
+            messageElement.textContent = messages[currentIndex];
+            // Beralih ke pesan berikutnya
+            currentIndex = (currentIndex + 1) % messages.length;
+        }
+
+        // Ubah pesan setiap 3 detik
+        setInterval(changeMessage, 5000);
+
+        // Tampilkan pesan pertama segera
+        changeMessage();
+    </script>
+</body>
+</html>
